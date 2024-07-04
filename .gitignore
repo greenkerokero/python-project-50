@@ -1,0 +1,8 @@
+.venv/
+
+# Ignore package distributives
+dist/
+
+# Ignore pycache
+__pycache__
+*.pyc
