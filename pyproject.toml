@@ -4,9 +4,15 @@ version = "0.1.0"
 description = ""
 authors = ["Dmitriy <kerokero@yandex.ru>"]
 readme = "README.md"
+packages = [
+  { include = "gendiff" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.gendiff:main"
 
 [build-system]
 requires = ["poetry-core"]
