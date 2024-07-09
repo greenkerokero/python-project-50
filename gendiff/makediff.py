@@ -1,4 +1,4 @@
-from json import load
+from json import load as json_load
 
 
 def bool_to_lowercase(input_value):
@@ -9,9 +9,9 @@ def bool_to_lowercase(input_value):
 
 def generate_diff(file_path1, file_path2):
     with open(file_path1, 'r') as json_data1:
-        first_data = load(json_data1)
+        first_data = json_load(json_data1)
     with open(file_path2, 'r') as json_data2:
-        second_data = load(json_data2)
+        second_data = json_load(json_data2)
 
     keys = first_data.keys() | second_data.keys()
     keys = sorted(keys)
