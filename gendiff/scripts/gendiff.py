@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
-from gendiff.gendiff_rename_me import generate_diff
+from gendiff.makediff import generate_diff
+
 
 def main():
     parser = argparse.ArgumentParser(
