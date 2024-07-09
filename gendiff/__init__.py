@@ -1,0 +1,1 @@
+from gendiff.gendiff_rename_me import generate_diff
