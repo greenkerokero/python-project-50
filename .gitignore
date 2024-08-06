@@ -1,5 +1,8 @@
 .vscode/
 .venv/
+.pytest_cache/
+.coverage
+coverage.xml
 
 # Ignore package distributives
 dist/
