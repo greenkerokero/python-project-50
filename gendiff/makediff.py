@@ -4,7 +4,7 @@ Takes paths to files as input and
 outputs the difference between them as string.
 """
 
-from json import load as json_load
+from gendiff.parsing import get_data
 
 
 def bool_to_lowercase(input_value):
@@ -32,11 +32,7 @@ def generate_diff(file_path1, file_path2):
         String contains difference between two files located at paths
         in file_path1 and file_path2
     """
-    with open(file_path1, 'r') as json_data1:
-        first_data = json_load(json_data1)
-    with open(file_path2, 'r') as json_data2:
-        second_data = json_load(json_data2)
-
+    first_data, second_data = get_data(file_path1, file_path2)
     keys = first_data.keys() | second_data.keys()
     keys = sorted(keys)
     diff_list = ['{']
