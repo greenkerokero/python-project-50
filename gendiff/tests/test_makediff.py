@@ -1,7 +1,8 @@
 """Test makediff module."""
 
-from gendiff.makediff import generate_diff
 import os
+
+from gendiff.makediff import generate_diff
 
 
 def get_fixture_path(name):
