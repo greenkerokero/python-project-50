@@ -8,7 +8,7 @@ from gendiff.makediff import generate_diff
 def main():
     """Implement user interface."""
     parser = argparse.ArgumentParser(
-        usage='gendiff [options] <filepath1> <filepath2>',
+        usage='gendiff [options] <first_file> <second_file>',
         description='Compares two configuration files and shows a difference.',
     )
     parser.add_argument('first_file', help=argparse.SUPPRESS)
