@@ -52,7 +52,7 @@ def test_diff_flat_yaml():
     assert correct == diff
 
 
-def test_diff_json():
+def test_diff_nested_json():
     """Check that json files are compare correctly."""
     filepath1 = get_fixture_path('nested_file1.json')
     filepath2 = get_fixture_path('nested_file2.json')
@@ -62,7 +62,7 @@ def test_diff_json():
     assert correct == diff
 
 
-def test_diff_yaml():
+def test_diff_nested_yaml():
     """Check that yaml files are compare correctly."""
     filepath1 = get_fixture_path('nested_file1.yaml')
     filepath2 = get_fixture_path('nested_file2.yaml')
