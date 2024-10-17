@@ -31,6 +31,7 @@ def open_file(path):
     with open(path, encoding='utf8') as fl:
         return fl.read().strip()
 
+
 def test_diff_flat_json():
     """Check that flat json files are compare correctly."""
     filepath1 = get_fixture_path('flat_file1.json')
