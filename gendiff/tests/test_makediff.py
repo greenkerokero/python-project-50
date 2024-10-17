@@ -23,7 +23,7 @@ def open_file(path):
     Open file and return it content as string.
 
     Args:
-        path: path tu file
+        path: path to file
 
     Returns:
         File content as string
@@ -53,7 +53,7 @@ def test_diff_flat_yaml():
 
 
 def test_diff_nested_json():
-    """Check that json files are compare correctly."""
+    """Check that nested json files are compare correctly."""
     filepath1 = get_fixture_path('nested_file1.json')
     filepath2 = get_fixture_path('nested_file2.json')
     correct_diff_path = get_fixture_path('diff_result_nested_json')
@@ -63,7 +63,7 @@ def test_diff_nested_json():
 
 
 def test_diff_nested_yaml():
-    """Check that yaml files are compare correctly."""
+    """Check that nested yaml files are compare correctly."""
     filepath1 = get_fixture_path('nested_file1.yaml')
     filepath2 = get_fixture_path('nested_file2.yaml')
     correct_diff_path = get_fixture_path('diff_result_nested_yaml')
