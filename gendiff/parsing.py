@@ -12,7 +12,7 @@ def get_file_extension(path):
         path: Path to file
 
     Returns:
-        String with extension of file. If extension not exist - emty string
+        String with extension of file. If extension not exist - empty string
     """
     file_name = path.split('/')[-1]
     split_file_name = file_name.split('.')

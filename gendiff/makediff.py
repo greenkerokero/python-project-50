@@ -21,7 +21,7 @@ def bool_to_lowercase(input_value):
     return input_value
 
 
-def generate_diff(file_path1, file_path2):
+def make_diff(file_path1, file_path2):
     """Generate difference between two json or yaml files.
 
     Args:
