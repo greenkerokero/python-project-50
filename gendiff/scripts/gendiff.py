@@ -2,7 +2,7 @@
 """Entry point of project. Script implement user interface."""
 import argparse
 
-from gendiff.generate_diff import make_diff
+from gendiff.generate_diff import generate_diff
 
 
 def main():
@@ -15,7 +15,7 @@ def main():
     parser.add_argument('second_file', help=argparse.SUPPRESS)
     parser.add_argument('-f', '--format', help='set format of output')
     args = parser.parse_args()
-    compare = make_diff(args.first_file, args.second_file)
+    compare = generate_diff(args.first_file, args.second_file)
     print(compare)
 
 

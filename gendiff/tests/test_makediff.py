@@ -3,7 +3,7 @@
 
 import os
 
-from gendiff.generate_diff import make_diff
+from gendiff.generate_diff import generate_diff
 
 
 def get_fixture_path(name):
