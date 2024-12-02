@@ -2,7 +2,7 @@
 """Entry point of project. Script implement user interface."""
 import argparse
 
-from gendiff.makediff import make_diff
+from gendiff.generate_diff import make_diff
 
 
 def main():

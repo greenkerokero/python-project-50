@@ -1,2 +1,2 @@
 """Import function from module in package."""
-from gendiff.makediff import make_diff
+from gendiff.generate_diff import make_diff
