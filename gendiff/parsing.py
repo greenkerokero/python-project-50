@@ -1,45 +1,21 @@
 """Parsing files."""
 
-from json import load as json_load
+from json import loads as json_loads
 
-from yaml import safe_load as yaml_load
-
-
-def get_file_extension(path):
-    """Get file extension from path to file.
-
-    Args:
-        path: Path to file
-
-    Returns:
-        String with extension of file. If extension not exist - empty string
-    """
-    file_name = path.split('/')[-1]
-    split_file_name = file_name.split('.')
-    if len(split_file_name) < 2:
-        return ''
-    return split_file_name[-1]
+from yaml import load as yaml_load, SafeLoader
 
 
-def get_data(file_path1, file_path2):
+def parsing(string, string_format='json'):
     """Get data from files.
 
     Args:
-        file_path1: Path to first file
-        file_path2: Path to second file
+        string: Input string
+        string_format: Input string format, json or yaml
 
     Returns:
-        Tuple with data from files
+        Dictionary containing data from string
     """
-    extention = get_file_extension(file_path1)
-    if extention == 'json':
-        with open(file_path1, 'r') as json_data1:
-            first_data = json_load(json_data1)
-        with open(file_path2, 'r') as json_data2:
-            second_data = json_load(json_data2)
-    elif extention in {'yaml', 'yml'}:
-        with open(file_path1, 'r') as yaml_data1:
-            first_data = yaml_load(yaml_data1)
-        with open(file_path2, 'r') as yaml_data2:
-            second_data = yaml_load(yaml_data2)
-    return (first_data, second_data)
+    if string_format == 'json':
+        return json_loads(string)
+    elif string_format in {'yaml', 'yml'}:
+        return yaml_load(string, Loader=SafeLoader)
