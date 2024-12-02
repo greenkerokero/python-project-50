@@ -4,7 +4,7 @@ Takes paths to files as input and
 outputs the difference between them as string.
 """
 
-from gendiff.parsing import get_data
+from gendiff.parsing import parse
 
 
 def get_file_extension(path):
@@ -91,8 +91,8 @@ def make_diff(file_path1, file_path2):
         second_list = [line for line in second_file]
         second_data = ''.join(second_list)
     extention = get_file_extension(file_path1)
-    first_dict = get_data(first_data, extention)
-    second_dict = get_data(second_data, extention)
+    first_dict = parse(first_data, extention)
+    second_dict = parse(second_data, extention)
 
     keys = first_dict.keys() | second_dict.keys()
     keys = sorted(keys)

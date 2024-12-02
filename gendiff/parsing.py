@@ -5,7 +5,7 @@ from json import loads as json_loads
 from yaml import load as yaml_load, SafeLoader
 
 
-def parsing(string, string_format='json'):
+def parse(string, string_format='json'):
     """Get data from files.
 
     Args:
