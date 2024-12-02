@@ -1,7 +1,6 @@
 """Parsing files."""
 
 from json import loads as json_loads
-
 from yaml import load as yaml_load, SafeLoader
 
 
