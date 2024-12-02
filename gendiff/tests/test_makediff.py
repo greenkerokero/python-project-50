@@ -38,7 +38,7 @@ def test_diff_flat_json():
     filepath2 = get_fixture_path('flat_file2.json')
     correct_diff_path = get_fixture_path('diff_result_flat_json')
     correct = open_file(correct_diff_path)
-    diff = make_diff(filepath1, filepath2)
+    diff = generate_diff(filepath1, filepath2)
     assert correct == diff
 
 
@@ -48,7 +48,7 @@ def test_diff_flat_yaml():
     filepath2 = get_fixture_path('flat_file2.yaml')
     correct_diff_path = get_fixture_path('diff_result_flat_yaml')
     correct = open_file(correct_diff_path)
-    diff = make_diff(filepath1, filepath2)
+    diff = generate_diff(filepath1, filepath2)
     assert correct == diff
 
 
@@ -58,7 +58,7 @@ def test_diff_nested_json():
     filepath2 = get_fixture_path('nested_file2.json')
     correct_diff_path = get_fixture_path('diff_result_nested_json')
     correct = open_file(correct_diff_path)
-    diff = make_diff(filepath1, filepath2)
+    diff = generate_diff(filepath1, filepath2)
     assert correct == diff
 
 
@@ -68,5 +68,5 @@ def test_diff_nested_yaml():
     filepath2 = get_fixture_path('nested_file2.yaml')
     correct_diff_path = get_fixture_path('diff_result_nested_yaml')
     correct = open_file(correct_diff_path)
-    diff = make_diff(filepath1, filepath2)
+    diff = generate_diff(filepath1, filepath2)
     assert correct == diff
