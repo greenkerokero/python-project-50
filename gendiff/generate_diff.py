@@ -4,6 +4,7 @@ from gendiff.parsing import parse
 from gendiff.makediff import build_diff_tree
 from gendiff.formater import format_diff
 
+
 def generate_diff(path_to_file1, path_to_file2, format_name='stylish'):
     string1 = get_data_from_file(path_to_file1)
     string2 = get_data_from_file(path_to_file2)
