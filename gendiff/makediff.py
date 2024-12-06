@@ -1,4 +1,16 @@
+"""Build diff betwin two dictionary."""
+
+
 def build_diff_tree(first_dict, second_dict):
+    """Build diff betwin two dictionary.
+
+    Args:
+        first_dict: some dictionary
+        second_dict: some other dictionary
+
+    Returns:
+        Dictionary contains tree of differences between two source dictionaries
+    """
     def inner(first, second):
         inner_repr = {}
         keys = first.keys() | second.keys()
