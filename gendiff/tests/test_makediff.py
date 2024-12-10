@@ -3,6 +3,7 @@
 
 import os
 
+from pytest import mark
 from gendiff.generate_diff import generate_diff
 
 
@@ -37,7 +38,7 @@ def test_diff_flat_json():
     filepath1 = get_fixture_path('flat_file1.json')
     filepath2 = get_fixture_path('flat_file2.json')
     format_name = 'stylish'
-    correct_diff_path = get_fixture_path('diff_result_flat_json')
+    correct_diff_path = get_fixture_path('diff_result_stylish_flat_json')
     correct = open_file(correct_diff_path)
     diff = generate_diff(filepath1, filepath2, format_name)
     assert correct == diff
@@ -48,7 +49,7 @@ def test_diff_flat_yaml():
     filepath1 = get_fixture_path('flat_file1.yaml')
     filepath2 = get_fixture_path('flat_file2.yaml')
     format_name = 'stylish'
-    correct_diff_path = get_fixture_path('diff_result_flat_yaml')
+    correct_diff_path = get_fixture_path('diff_result_stylish_flat_yaml')
     correct = open_file(correct_diff_path)
     diff = generate_diff(filepath1, filepath2, format_name)
     assert correct == diff
@@ -59,7 +60,7 @@ def test_diff_nested_json():
     filepath1 = get_fixture_path('nested_file1.json')
     filepath2 = get_fixture_path('nested_file2.json')
     format_name = 'stylish'
-    correct_diff_path = get_fixture_path('diff_result_nested_json')
+    correct_diff_path = get_fixture_path('diff_result_stylish_nested_json')
     correct = open_file(correct_diff_path)
     diff = generate_diff(filepath1, filepath2, format_name)
     assert correct == diff
@@ -70,7 +71,7 @@ def test_diff_nested_yaml():
     filepath1 = get_fixture_path('nested_file1.yaml')
     filepath2 = get_fixture_path('nested_file2.yaml')
     format_name = 'stylish'
-    correct_diff_path = get_fixture_path('diff_result_nested_yaml')
+    correct_diff_path = get_fixture_path('diff_result_stylish_nested_yaml')
     correct = open_file(correct_diff_path)
     diff = generate_diff(filepath1, filepath2, format_name)
     assert correct == diff
