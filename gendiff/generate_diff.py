@@ -5,7 +5,7 @@ from gendiff.file_processing import get_data_from_file
 from gendiff.file_processing import get_file_extension
 from gendiff.parsing import parse_structured_string
 from gendiff.makediff import build_diff_tree
-from gendiff.formater import format_diff
+from gendiff.formater.formater import diff_formater
 
 
 def generate_diff(path_to_file1, path_to_file2, format_name):
@@ -30,4 +30,4 @@ def generate_diff(path_to_file1, path_to_file2, format_name):
 
     diff_tree = build_diff_tree(dict1, dict2)
 
-    return format_diff(diff_tree, format_name)
+    return diff_formater(diff_tree, format_name)

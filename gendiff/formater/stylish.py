@@ -1,7 +1,7 @@
 """Retrun formated string diff."""
 
 
-def convert_to_stylish(inner_data):
+def convert_to_string(inner_data):
     """Convert data to string and boolen and none types in special stinrgs.
 
     Args:
@@ -21,7 +21,7 @@ def convert_to_stylish(inner_data):
             return str(inner_data)
 
 
-def format_diff(diff_tree, output_format='stylish'):
+def format_stylish(diff_tree, output_format='stylish'):
     """Retrun formated string diff.
 
     Args:
@@ -44,7 +44,7 @@ def format_diff(diff_tree, output_format='stylish'):
 
     def inner(inner_data, depth):
         if not isinstance(inner_data, dict):
-            return convert_to_stylish(inner_data)
+            return convert_to_string(inner_data)
 
         indent = replacer * depth
         child_ident_size = depth + replacers_count
