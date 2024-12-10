@@ -10,3 +10,12 @@ dist/
 # Ignore pycache
 __pycache__
 *.pyc
+
+# Temp
+file1.json
+file2.json
+gendiff/diff_tree.py
+gendiff/tests/fixtures/nested_file1 copy.json
+gendiff/tests/fixtures/nested_file2 copy.json
+gendiff/x_makediff_old.py
+karkas
