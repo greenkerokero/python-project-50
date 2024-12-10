@@ -21,7 +21,7 @@ def convert_to_string(inner_data):
             return str(inner_data)
 
 
-def format_stylish(diff_tree, output_format='stylish'):
+def format_stylish(diff_tree):
     """Retrun formated string diff.
 
     Args:
