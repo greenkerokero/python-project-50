@@ -33,29 +33,35 @@ def format_stylish(diff_tree, output_format='stylish'):
     Returns:
         String contain differences in given format
     """
-    match output_format:
-        case 'stylish':
-            replacer = '    '
-            replacers_count = 1
-            add_symbol = '  + '
-            delete_symbol = '  - '
-        case _:
-            return 'Unknown format'
+    # match output_format:
+    #     case 'stylish':
+    #         replacer = '    '
+    #         replacers_count = 1
+    #         add_symbol = '  + '
+    #         delete_symbol = '  - '
+    #     case _:
+    #         return 'Unknown format'
 
     def inner(inner_data, depth):
         if not isinstance(inner_data, dict):
             return convert_to_string(inner_data)
 
+        replacer = '    '
         indent = replacer * depth
-        child_ident_size = depth + replacers_count
+        child_ident_size = depth + 1
         child_ident = replacer * child_ident_size
         child_ident_cut = replacer * (child_ident_size - 1)
+
+        # indent = replacer * depth
+        # child_ident_size = depth + replacers_count
+        # child_ident = replacer * child_ident_size
+        # child_ident_cut = replacer * (child_ident_size - 1)
 
         children = []
         for key, node in inner_data.items():
             key_indent = child_ident + key
-            add_key_indent = child_ident_cut + add_symbol + key
-            delete_key_indent = child_ident_cut + delete_symbol + key
+            add_key_indent = child_ident_cut + '  + ' + key
+            delete_key_indent = child_ident_cut + '  - ' + key
             if isinstance(node, dict):
                 current_type = node.get('type')
                 current_value = node.get('value')
