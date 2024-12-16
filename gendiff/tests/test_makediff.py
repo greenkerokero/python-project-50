@@ -84,37 +84,37 @@ def open_file(path):
             'stylish',
             get_fixture_path('flat_file1.json'),
             get_fixture_path('flat_file2.json'),
-            get_fixture_path('diff_result_stylish_flat'),
+            get_fixture_path('expected/diff_result_stylish_flat'),
         ),
         (
             'stylish',
             get_fixture_path('flat_file1.yaml'),
             get_fixture_path('flat_file2.yaml'),
-            get_fixture_path('diff_result_stylish_flat'),
+            get_fixture_path('expected/diff_result_stylish_flat'),
         ),
         (
             'stylish',
             get_fixture_path('nested_file1.json'),
             get_fixture_path('nested_file2.json'),
-            get_fixture_path('diff_result_stylish_nested'),
+            get_fixture_path('expected/diff_result_stylish_nested'),
         ),
         (
             'stylish',
             get_fixture_path('nested_file1.yaml'),
             get_fixture_path('nested_file2.yaml'),
-            get_fixture_path('diff_result_stylish_nested'),
+            get_fixture_path('expected/diff_result_stylish_nested'),
         ),
         (
             'plain',
             get_fixture_path('nested_file1.json'),
             get_fixture_path('nested_file2.json'),
-            get_fixture_path('diff_result_plain_nested'),
+            get_fixture_path('expected/diff_result_plain_nested'),
         ),
         (
             'plain',
             get_fixture_path('nested_file1.yaml'),
             get_fixture_path('nested_file2.yaml'),
-            get_fixture_path('diff_result_plain_nested'),
+            get_fixture_path('expected/diff_result_plain_nested'),
         ),
     ],
 )
@@ -127,6 +127,6 @@ def test_param(format_name, filepath1, filepath2, correct_diff_path):
         filepath2: Path to first file
         correct_diff_path: Path to file containing correct compare result
     """
-    correct = open_file(correct_diff_path)
     diff = generate_diff(filepath1, filepath2, format_name)
-    assert correct == diff
+    expected = open_file(correct_diff_path)
+    assert diff == expected
