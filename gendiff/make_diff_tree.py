@@ -13,8 +13,7 @@ def build_diff_tree(first_dict, second_dict):
     """
     def inner(first, second):
         inner_repr = {}
-        keys = first.keys() | second.keys()
-        keys = sorted(keys)
+        keys = sorted(first.keys() | second.keys())
         for key in keys:
             if key not in first:
                 inner_repr[key] = {
