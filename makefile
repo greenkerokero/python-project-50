@@ -25,6 +25,9 @@ run-nested-json:
 run-nested-yaml:
 	poetry run gendiff gendiff/tests/fixtures/nested_file1.yaml gendiff/tests/fixtures/nested_file2.yaml
 
+run-plain-nested-json:
+	poetry run gendiff -f plain gendiff/tests/fixtures/nested_file1.json gendiff/tests/fixtures/nested_file2.json
+
 lint:
 	poetry run flake8 gendiff
 
