@@ -4,7 +4,7 @@
 from gendiff.file_processing import get_data_from_file
 from gendiff.file_processing import get_file_extension
 from gendiff.parsing import parse_structured_string
-from gendiff.makediff import build_diff_tree
+from gendiff.make_diff_tree import build_diff_tree
 from gendiff.formater.formater import diff_formater
 
 
