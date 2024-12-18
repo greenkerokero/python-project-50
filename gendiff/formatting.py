@@ -1,7 +1,7 @@
 """Module provides function to format diff string in selected format."""
 
-from gendiff.formater.plain import format_plain
-from gendiff.formater.stylish import format_stylish
+from gendiff.formaters.plain import format_plain
+from gendiff.formaters.stylish import format_stylish
 
 
 def diff_formater(diff_tree, format_name):
