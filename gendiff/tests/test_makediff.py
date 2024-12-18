@@ -116,6 +116,18 @@ def open_file(path):
             get_fixture_path('nested_file2.yaml'),
             get_fixture_path('expected/diff_result_plain_nested'),
         ),
+        (
+            'json',
+            get_fixture_path('nested_file1.json'),
+            get_fixture_path('nested_file2.json'),
+            get_fixture_path('expected/diff_result_json_nested'),
+        ),
+        (
+            'json',
+            get_fixture_path('nested_file1.yaml'),
+            get_fixture_path('nested_file2.yaml'),
+            get_fixture_path('expected/diff_result_json_nested'),
+        ),
     ],
 )
 def test_param(format_name, filepath1, filepath2, correct_diff_path):
