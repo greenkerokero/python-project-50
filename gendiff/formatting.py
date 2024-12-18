@@ -2,6 +2,7 @@
 
 from gendiff.formaters.plain import format_plain
 from gendiff.formaters.stylish import format_stylish
+from gendiff.formaters.jsonify import format_json
 
 
 def diff_formater(diff_tree, format_name):
@@ -20,5 +21,7 @@ def diff_formater(diff_tree, format_name):
             return format_stylish(diff_tree)
         case 'plain':
             return format_plain(diff_tree)
+        case 'json':
+            return format_json(diff_tree)
         case _:
             return 'Unknown format'
