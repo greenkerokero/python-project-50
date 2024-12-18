@@ -22,14 +22,14 @@ def convert_to_string(inner_data):
 
 
 def format_stylish(diff_tree):
-    """Retrun formated string diff.
+    """Retrun string diff in stylish format.
 
     Args:
         diff_tree: Dictionary contains tree of differences
                    between two another dictionaries
 
     Returns:
-        String contain differences in given format
+        String contain differences in stylish format
     """
     def inner(inner_data, depth):
         if not isinstance(inner_data, dict):

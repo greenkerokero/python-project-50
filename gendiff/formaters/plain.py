@@ -25,14 +25,14 @@ def convert_to_string(inner_data):
 
 
 def format_plain(diff_tree):
-    """Retrun string diff in plain format..
+    """Retrun string diff in plain format.
 
     Args:
         diff_tree: Dictionary contains tree of differences
                    between two another dictionaries
 
     Returns:
-        String contain differences in given format
+        String contain differences in plain format
     """
     def inner(inner_data, node_path):
         if not isinstance(inner_data, dict):
