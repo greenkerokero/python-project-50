@@ -3,8 +3,8 @@
 
 import os
 
-from pytest import mark
 from gendiff.generate_diff import generate_diff
+from pytest import mark
 
 
 def get_fixture_path(name):
