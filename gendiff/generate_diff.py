@@ -17,7 +17,7 @@ def generate_diff(path_to_file1, path_to_file2, format_name):
         format_name: Name of format in which you want to get result
 
     Returns:
-        String contains diif in specified formt
+        String contains diff in specified format
     """
     string1 = get_data_from_file(path_to_file1)
     string2 = get_data_from_file(path_to_file2)
