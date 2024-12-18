@@ -1,8 +1,8 @@
 """Module provides function to format diff string in selected format."""
 
+from gendiff.formaters.jsonify import format_json
 from gendiff.formaters.plain import format_plain
 from gendiff.formaters.stylish import format_stylish
-from gendiff.formaters.jsonify import format_json
 
 
 def diff_formater(diff_tree, format_name):

@@ -1,11 +1,10 @@
 """Generate diff tow json or yaml files in specified format."""
 
 
-from gendiff.file_processing import get_data_from_file
-from gendiff.file_processing import get_file_extension
-from gendiff.parsing import parse_structured_string
-from gendiff.make_diff_tree import build_diff_tree
+from gendiff.file_processing import get_data_from_file, get_file_extension
 from gendiff.formatting import diff_formater
+from gendiff.make_diff_tree import build_diff_tree
+from gendiff.parsing import parse_structured_string
 
 
 def generate_diff(path_to_file1, path_to_file2, format_name):

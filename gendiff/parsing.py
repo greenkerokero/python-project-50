@@ -1,7 +1,9 @@
 """Parsing files."""
 
 from json import loads as json_loads
-from yaml import load as yaml_load, SafeLoader
+
+from yaml import SafeLoader
+from yaml import load as yaml_load
 
 
 def parse_structured_string(string, string_format='json'):
