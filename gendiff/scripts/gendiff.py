@@ -16,9 +16,10 @@ def main():
     parser.add_argument(
         '-f',
         '--format',
-        help=''.join(
-            'specify the format of the input file\n'
-            'available formats: stylish (default), plain, json',
+        default='stylish',
+        help=(
+            'specify the format of the output\n'
+            'available formats: stylish (default), plain, json'
         ),
     )
     parser.add_argument('FILE1', help=argparse.SUPPRESS)
