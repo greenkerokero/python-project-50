@@ -4,30 +4,29 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/70c44d23dc5e0e1f6d9e/maintainability)](https://codeclimate.com/github/greenkerokero/python-project-50/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/70c44d23dc5e0e1f6d9e/test_coverage)](https://codeclimate.com/github/greenkerokero/python-project-50/test_coverage)
 
-Gendiff compares two json or yaml files and shows a difference
-
-Gendiff — a utility for comparing json or yaml files
-Compares two json or yaml files and shows the differences between them. It supports different output formats, allowing you to customize how the results are displayed.
+Gendiff — a utility for comparing json or yaml files. It supports different output formats, allowing you to customize how the results are displayed.
 
 ## System requirements
 - Python >= 3.11
 
 ## Setup
+```
 make install
 make build
 make package-install
+```
 
 ## Usage
 gendiff [options] FILE1 FILE2
 Options:
 - -h, --help
-Show help information about the utility and exit.
+   Show help information about the utility and exit.
 
 - -f FORMAT, --format FORMAT
-Specify the output format for the differences. Available formats:
- - stylish (default) — a formatted and easy-to-read output with colors and indentation.
- - plain — a simple text output without extra decorations.
- - json — output in JSON format, useful for further processing or integration with other tools.
+   Specify the output format for the differences. Available formats:
+  - stylish (default) — a formatted and easy-to-read output with colors and indentation.
+  - plain — a simple text output without extra decorations.
+  - json — output in JSON format, useful for further processing or integration with other tools.
 
 [![asciicast](https://asciinema.org/a/Zwvonc5f5wM3gIlHIYCw7sQwa.svg)](https://asciinema.org/a/Zwvonc5f5wM3gIlHIYCw7sQwa)
 
