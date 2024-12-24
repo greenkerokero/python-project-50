@@ -50,6 +50,12 @@ def open_file(path):
         ),
         (
             'stylish',
+            get_fixture_path('flat_file1.yml'),
+            get_fixture_path('flat_file2.yml'),
+            get_fixture_path('expected/diff_result_stylish_flat'),
+        ),
+        (
+            'stylish',
             get_fixture_path('nested_file1.json'),
             get_fixture_path('nested_file2.json'),
             get_fixture_path('expected/diff_result_stylish_nested'),
@@ -129,6 +135,11 @@ def test_param(format_name, filepath1, filepath2, correct_diff_path):
         (
             get_fixture_path('flat_file1.yaml'),
             get_fixture_path('flat_file2.yaml'),
+            get_fixture_path('expected/diff_result_stylish_flat'),
+        ),
+        (
+            get_fixture_path('flat_file1.yml'),
+            get_fixture_path('flat_file2.yml'),
             get_fixture_path('expected/diff_result_stylish_flat'),
         ),
         (
