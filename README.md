@@ -33,26 +33,26 @@ Options:
 [![asciicast](https://asciinema.org/a/Zwvonc5f5wM3gIlHIYCw7sQwa.svg)](https://asciinema.org/a/Zwvonc5f5wM3gIlHIYCw7sQwa)
 
 ## Examples
-Differense between flat json files with stylish (default) output
+#### Differense between flat json files with stylish (default) output
 [![asciicast](https://asciinema.org/a/lCafl3wylk6fnfQezgRXKvUjR.svg)](https://asciinema.org/a/lCafl3wylk6fnfQezgRXKvUjR)
 
-Differense between flat yaml files with stylish (default) output
+#### Differense between flat yaml files with stylish (default) output
 [![asciicast](https://asciinema.org/a/slQs6wY8UsqHn1JdKzhRVWI86.svg)](https://asciinema.org/a/slQs6wY8UsqHn1JdKzhRVWI86)
 
-Differense between nested json files with stylish (default) output
+#### Differense between nested json files with stylish (default) output
 [![asciicast](https://asciinema.org/a/nGxcbICeEK2aSLBDMIXjkKVVc.svg)](https://asciinema.org/a/nGxcbICeEK2aSLBDMIXjkKVVc)
 
-Differense between nested yaml files with stylish (default) output
+#### Differense between nested yaml files with stylish (default) output
 [![asciicast](https://asciinema.org/a/7sR9PocvFaKBSVMZmYQ4xsNYV.svg)](https://asciinema.org/a/7sR9PocvFaKBSVMZmYQ4xsNYV)
 
-Differense between nested json files with plain output
+#### Differense between nested json files with plain output
 [![asciicast](https://asciinema.org/a/4VQC2MMyy3MggcUlH7Ckq31Q2.svg)](https://asciinema.org/a/4VQC2MMyy3MggcUlH7Ckq31Q2)
 
-Differense between nested yaml files with plain output
+#### Differense between nested yaml files with plain output
 [![asciicast](https://asciinema.org/a/yMDLD17hVTeMrf89h4a1YOqwk.svg)](https://asciinema.org/a/yMDLD17hVTeMrf89h4a1YOqwk)
 
-Differense between nested json files with json output
+#### Differense between nested json files with json output
 [![asciicast](https://asciinema.org/a/Z9CAQRomgBVXfRnDVOrcwTZgb.svg)](https://asciinema.org/a/Z9CAQRomgBVXfRnDVOrcwTZgb)
 
-Differense between nested yaml files with json output
+#### Differense between nested yaml files with json output
 [![asciicast](https://asciinema.org/a/GJSOOFWhXCYz7eSpRR8Ejuy4r.svg)](https://asciinema.org/a/GJSOOFWhXCYz7eSpRR8Ejuy4r)
