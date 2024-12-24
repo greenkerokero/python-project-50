@@ -33,50 +33,6 @@ def open_file(path):
         return fl.read().strip()
 
 
-# def test_diff_flat_json():
-#     """Check that flat json files are compare correctly."""
-#     filepath1 = get_fixture_path('flat_file1.json')
-#     filepath2 = get_fixture_path('flat_file2.json')
-#     format_name = 'stylish'
-#     correct_diff_path = get_fixture_path('diff_result_stylish_flat_json')
-#     correct = open_file(correct_diff_path)
-#     diff = generate_diff(filepath1, filepath2, format_name)
-#     assert correct == diff
-
-
-# def test_diff_flat_yaml():
-#     """Check that flat yaml files are compare correctly."""
-#     filepath1 = get_fixture_path('flat_file1.yaml')
-#     filepath2 = get_fixture_path('flat_file2.yaml')
-#     format_name = 'stylish'
-#     correct_diff_path = get_fixture_path('diff_result_stylish_flat_yaml')
-#     correct = open_file(correct_diff_path)
-#     diff = generate_diff(filepath1, filepath2, format_name)
-#     assert correct == diff
-
-
-# def test_diff_nested_json():
-#     """Check that nested json files are compare correctly."""
-#     filepath1 = get_fixture_path('nested_file1.json')
-#     filepath2 = get_fixture_path('nested_file2.json')
-#     format_name = 'stylish'
-#     correct_diff_path = get_fixture_path('diff_result_stylish_nested_json')
-#     correct = open_file(correct_diff_path)
-#     diff = generate_diff(filepath1, filepath2, format_name)
-#     assert correct == diff
-
-
-# def test_diff_nested_yaml():
-#     """Check that nested yaml files are compare correctly."""
-#     filepath1 = get_fixture_path('nested_file1.yaml')
-#     filepath2 = get_fixture_path('nested_file2.yaml')
-#     format_name = 'stylish'
-#     correct_diff_path = get_fixture_path('diff_result_stylish_nested_yaml')
-#     correct = open_file(correct_diff_path)
-#     diff = generate_diff(filepath1, filepath2, format_name)
-#     assert correct == diff
-
-
 @mark.parametrize(
     'format_name,filepath1,filepath2,correct_diff_path',
     [
@@ -105,6 +61,12 @@ def open_file(path):
             get_fixture_path('expected/diff_result_stylish_nested'),
         ),
         (
+            'stylish',
+            get_fixture_path('nested_file1.yml'),
+            get_fixture_path('nested_file2.yml'),
+            get_fixture_path('expected/diff_result_stylish_nested'),
+        ),
+        (
             'plain',
             get_fixture_path('nested_file1.json'),
             get_fixture_path('nested_file2.json'),
@@ -114,6 +76,12 @@ def open_file(path):
             'plain',
             get_fixture_path('nested_file1.yaml'),
             get_fixture_path('nested_file2.yaml'),
+            get_fixture_path('expected/diff_result_plain_nested'),
+        ),
+        (
+            'plain',
+            get_fixture_path('nested_file1.yml'),
+            get_fixture_path('nested_file2.yml'),
             get_fixture_path('expected/diff_result_plain_nested'),
         ),
         (
@@ -126,6 +94,12 @@ def open_file(path):
             'json',
             get_fixture_path('nested_file1.yaml'),
             get_fixture_path('nested_file2.yaml'),
+            get_fixture_path('expected/diff_result_json_nested'),
+        ),
+        (
+            'json',
+            get_fixture_path('nested_file1.yml'),
+            get_fixture_path('nested_file2.yml'),
             get_fixture_path('expected/diff_result_json_nested'),
         ),
     ],
