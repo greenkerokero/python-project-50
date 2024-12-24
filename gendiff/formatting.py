@@ -5,7 +5,7 @@ from gendiff.formaters.plain import format_plain
 from gendiff.formaters.stylish import format_stylish
 
 
-def diff_formater(diff_tree, format_name):
+def diff_formater(diff_tree, format_name='stylish'):
     """Format diff sting in selected format.
 
     Args:

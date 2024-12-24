@@ -7,7 +7,7 @@ from gendiff.make_diff_tree import build_diff_tree
 from gendiff.parsing import parse_structured_string
 
 
-def generate_diff(path_to_file1, path_to_file2, format_name):
+def generate_diff(path_to_file1, path_to_file2, format_name='stylish'):
     """Generate diff tow json or yaml files in specified format.
 
     Args:
