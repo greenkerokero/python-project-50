@@ -116,3 +116,46 @@ def test_param(format_name, filepath1, filepath2, correct_diff_path):
     diff = generate_diff(filepath1, filepath2, format_name)
     expected = open_file(correct_diff_path)
     assert diff == expected
+
+
+@mark.parametrize(
+    'filepath1,filepath2,correct_diff_path',
+    [
+        (
+            get_fixture_path('flat_file1.json'),
+            get_fixture_path('flat_file2.json'),
+            get_fixture_path('expected/diff_result_stylish_flat'),
+        ),
+        (
+            get_fixture_path('flat_file1.yaml'),
+            get_fixture_path('flat_file2.yaml'),
+            get_fixture_path('expected/diff_result_stylish_flat'),
+        ),
+        (
+            get_fixture_path('nested_file1.json'),
+            get_fixture_path('nested_file2.json'),
+            get_fixture_path('expected/diff_result_stylish_nested'),
+        ),
+        (
+            get_fixture_path('nested_file1.yaml'),
+            get_fixture_path('nested_file2.yaml'),
+            get_fixture_path('expected/diff_result_stylish_nested'),
+        ),
+        (
+            get_fixture_path('nested_file1.yml'),
+            get_fixture_path('nested_file2.yml'),
+            get_fixture_path('expected/diff_result_stylish_nested'),
+        ),
+    ],
+)
+def test_param_default_style(filepath1, filepath2, correct_diff_path):
+    """Check that files are compare correctly.
+
+    Args:
+        filepath1: Path to first file
+        filepath2: Path to first file
+        correct_diff_path: Path to file containing correct compare result
+    """
+    diff = generate_diff(filepath1, filepath2)
+    expected = open_file(correct_diff_path)
+    assert diff == expected
