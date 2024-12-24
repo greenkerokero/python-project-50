@@ -32,6 +32,7 @@ Options:
 
 [![asciicast](https://asciinema.org/a/Zwvonc5f5wM3gIlHIYCw7sQwa.svg)](https://asciinema.org/a/Zwvonc5f5wM3gIlHIYCw7sQwa)
 
+
 ## Examples
 #### Differense between flat json files with stylish (default) output
 [![asciicast](https://asciinema.org/a/lCafl3wylk6fnfQezgRXKvUjR.svg)](https://asciinema.org/a/lCafl3wylk6fnfQezgRXKvUjR)
