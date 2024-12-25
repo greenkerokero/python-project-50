@@ -20,12 +20,10 @@ make package-install
 ## Usage
 gendiff [options] FILE1 FILE2  
 Options:
-- -h, --help
-
+- -h, --help  
    Show help information about the utility and exit.
 
-- -f FORMAT, --format FORMAT
-
+- -f FORMAT, --format FORMAT  
    Specify the output format for the differences. Available formats:
   - stylish (default) — a formatted and easy-to-read output with colors and indentation.
   - plain — a simple text output without extra decorations.
