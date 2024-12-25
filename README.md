@@ -8,6 +8,7 @@ Gendiff — a utility for comparing json or yaml files. It supports different ou
 
 ## System requirements
 - Python >= 3.11
+- Pyyaml >= 6.0.2
 
 ## Setup
 ```
