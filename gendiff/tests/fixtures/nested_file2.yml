@@ -12,6 +12,7 @@ common:
       wow: so much
 group1:
   foo: bar
+  cow: moo
   baz: bars
   nest: str
 group3:

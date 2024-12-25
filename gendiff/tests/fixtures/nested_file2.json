@@ -17,6 +17,7 @@
   },
   "group1": {
     "foo": "bar",
+    "cow": "moo",
     "baz": "bars",
     "nest": "str"
   },
