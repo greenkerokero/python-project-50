@@ -18,7 +18,7 @@ def convert_to_string(inner_data):
         case None:
             return 'null'
         case _:
-            return str(inner_data)
+            return inner_data
 
 
 def format_stylish(diff_tree):

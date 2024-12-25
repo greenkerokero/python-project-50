@@ -1,4 +1,5 @@
 """Module provides function to format diff string in plain format."""
+from json import dumps as json_dumps
 
 
 def convert_to_string(inner_data):
@@ -12,16 +13,11 @@ def convert_to_string(inner_data):
     """
     if isinstance(inner_data, dict):
         return '[complex value]'
-
-    match inner_data:
-        case True:
-            return 'true'
-        case False:
-            return 'false'
-        case None:
-            return 'null'
-        case _:
-            return f"'{str(inner_data)}'"
+    elif isinstance(inner_data, bool) or inner_data is None:
+        return json_dumps(inner_data)
+    elif isinstance(inner_data, int):
+        return inner_data
+    return f"'{inner_data}'"
 
 
 def format_plain(diff_tree):
