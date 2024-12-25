@@ -18,7 +18,7 @@ make package-install
 ```
 
 ## Usage
-gendiff [options] FILE1 FILE2
+gendiff [options] FILE1 FILE2  
 Options:
 - -h, --help
 
