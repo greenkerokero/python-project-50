@@ -25,7 +25,7 @@ Options:
 
 - -f FORMAT, --format FORMAT  
    Specify the output format for the differences. Available formats:
-  - stylish (default) — a formatted and easy-to-read output with colors and indentation.
+  - stylish (default) — a formatted and easy-to-read output with indentation.
   - plain — a simple text output without extra decorations.
   - json — output in JSON format, useful for further processing or integration with other tools.
 
