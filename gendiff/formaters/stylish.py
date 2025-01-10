@@ -49,8 +49,6 @@ def format_stylish(diff_tree):
             if isinstance(node, dict):
                 current_type = node.get('type')
                 current_value = node.get('value')
-                current_old = node.get('old')
-                current_new = node.get('new')
                 if current_type in {'nested', 'unchanged'}:
                     string = (
                         f'{key_indent}: '
@@ -69,11 +67,11 @@ def format_stylish(diff_tree):
                 elif current_type == 'changed':
                     string_del = (
                         f'{delete_key_indent}: '
-                        f'{inner(current_old, child_ident_size)}'
+                        f'{inner(node.get("old"), child_ident_size)}'
                     )
                     string_add = (
                         f'{add_key_indent}: '
-                        f'{inner(current_new, child_ident_size)}'
+                        f'{inner(node.get("new"), child_ident_size)}'
                     )
                     string = f'{string_del}\n{string_add}'
                 else:
