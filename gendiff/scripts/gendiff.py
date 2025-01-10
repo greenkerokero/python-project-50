@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Entry point of project. Script implement user interface."""
 
-from gendiff.generate_diff import generate_diff
 from gendiff.argument_parsing import pars_cli_argument
+from gendiff.generate_diff import generate_diff
 
 
 def main():
