@@ -1,4 +1,4 @@
-"""Parsing files."""
+"""Parsing structured string."""
 
 from json import loads as json_loads
 
@@ -7,7 +7,7 @@ from yaml import load as yaml_load
 
 
 def parse_structured_string(string, string_format='json'):
-    """Get data from files.
+    """Get data from structured string.
 
     Args:
         string: Input string

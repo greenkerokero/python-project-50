@@ -1,22 +1,8 @@
 """Module contains functions for working with files."""
 
-
 from pathlib import PurePath
 
-
-def get_data_from_file(file_path):
-    """Open file safely and returns its contents.
-
-    Args:
-        file_path: Path to file
-
-    Returns:
-        String with file contents
-    """
-    with open(file_path, 'r') as text_file:
-        # lines_list = [line for line in text_file]
-        # return ''.join(lines_list)
-        return text_file.read()
+from gendiff.parsing import parse_structured_string
 
 
 def get_file_extension(file_path):
@@ -30,3 +16,19 @@ def get_file_extension(file_path):
     """
     path = PurePath(file_path)
     return path.suffix.lower()[1:]
+
+
+def parse_file(file_path):
+    """Parse structured text file.
+
+    Args:
+        file_path: Path to file
+
+    Returns:
+        Dictionary containing data from structured text file
+    """
+    with open(file_path, 'r') as text_file:
+        file_data = text_file.read()
+
+    extension = get_file_extension(file_path)
+    return parse_structured_string(file_data, extension)
