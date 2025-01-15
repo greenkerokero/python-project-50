@@ -16,12 +16,10 @@ def diff_formater(diff_tree, format_name='stylish'):
     Returns:
         String contains diff in specified format
     """
-    match format_name:
-        case 'stylish':
-            return format_stylish(diff_tree)
-        case 'plain':
-            return format_plain(diff_tree)
-        case 'json':
-            return format_json(diff_tree)
-        case _:
-            return 'Unknown format'
+    if format_name == 'stylish':
+        return format_stylish(diff_tree)
+    elif format_name == 'plain':
+        return format_plain(diff_tree)
+    elif format_name == 'json':
+        return format_json(diff_tree)
+    return 'Unknown format'

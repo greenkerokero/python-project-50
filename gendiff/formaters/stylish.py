@@ -10,15 +10,13 @@ def convert_to_string(inner_data):
     Returns:
         Convert to string data
     """
-    match inner_data:
-        case True:
-            return 'true'
-        case False:
-            return 'false'
-        case None:
-            return 'null'
-        case _:
-            return inner_data
+    if inner_data is True:
+        return 'true'
+    elif inner_data is False:
+        return 'false'
+    elif inner_data is None:
+        return 'null'
+    return inner_data
 
 
 def format_stylish(diff_tree):

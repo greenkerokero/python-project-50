@@ -49,26 +49,25 @@ def format_plain(diff_tree):
             current_value = node.get('value')
             current_old = node.get('old')
             current_new = node.get('new')
-            match current_type:
-                case 'nested':
-                    string = inner(current_value, new_node_path)
-                case 'added':
-                    value_add = convert_to_string(current_value)
-                    string = (
-                        f'Property {path_in_string} was added '
-                        f'with value: {value_add}'
-                    )
-                case 'deleted':
-                    string = f'Property {path_in_string} was removed'
-                case 'changed':
-                    value_old = convert_to_string(current_old)
-                    value_new = convert_to_string(current_new)
-                    string = (
-                        f'Property {path_in_string} was updated. '
-                        f'From {value_old} to {value_new}'
-                    )
-                case 'unchanged':
-                    continue
+            if current_type == 'nested':
+                string = inner(current_value, new_node_path)
+            elif current_type == 'added':
+                value_add = convert_to_string(current_value)
+                string = (
+                    f'Property {path_in_string} was added '
+                    f'with value: {value_add}'
+                )
+            elif current_type == 'deleted':
+                string = f'Property {path_in_string} was removed'
+            elif current_type == 'changed':
+                value_old = convert_to_string(current_old)
+                value_new = convert_to_string(current_new)
+                string = (
+                    f'Property {path_in_string} was updated. '
+                    f'From {value_old} to {value_new}'
+                )
+            elif current_type == 'unchanged':
+                continue
             children.append(string)
         return '\n'.join(children)
     return inner(diff_tree, [])
