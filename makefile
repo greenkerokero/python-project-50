@@ -14,10 +14,10 @@ package-reinstall:
 	python3 -m pip install --user dist/*.whl --force-reinstall
 
 run:
-	poetry run gendiff gendiff/tests/fixtures/nested_file1.json gendiff/tests/fixtures/nested_file2.json
+	poetry run gendiff tests/fixtures/nested_file1.json tests/fixtures/nested_file2.json
 
 run2:
-	poetry run gendiff -f plain gendiff/tests/fixtures/nested_file1.json gendiff/tests/fixtures/nested_file2.json
+	poetry run gendiff -f plain tests/fixtures/nested_file1.json tests/fixtures/nested_file2.json
 
 lint:
 	poetry run flake8 gendiff
