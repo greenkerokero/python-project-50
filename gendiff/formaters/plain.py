@@ -36,10 +36,6 @@ def format_plain(diff_tree):
         children = []
         for key, node in inner_data.items():
             string = '[complex value]'
-            # Добавить в новый список new_node_path
-            # элементы старого списка node_path
-            # с помощью оператора распаковки *
-            # и значение текщего ключа
             new_node_path = [*node_path, key]
             path_in_string = f"'{'.'.join(new_node_path)}'"
             if not isinstance(node, dict):
