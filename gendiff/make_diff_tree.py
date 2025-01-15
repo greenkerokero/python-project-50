@@ -1,5 +1,7 @@
 """Build diff betwin two dictionary."""
 
+from gendiff import constants
+
 
 def build_diff_tree(first_dict, second_dict):
     """Build diff betwin two dictionary.
@@ -17,27 +19,27 @@ def build_diff_tree(first_dict, second_dict):
         for key in keys:
             if key not in first:
                 inner_repr[key] = {
-                    'type': 'added',
+                    'type': constants.ADDED,
                     'value': second[key],
                 }
             elif key not in second:
                 inner_repr[key] = {
-                    'type': 'deleted',
+                    'type': constants.DELETED,
                     'value': first[key],
                 }
             elif first[key] == second[key]:
                 inner_repr[key] = {
-                    'type': 'unchanged',
+                    'type': constants.UNCHANGED,
                     'value': first[key],
                 }
             elif isinstance(first[key], dict) and isinstance(second[key], dict):
                 inner_repr[key] = {
-                    'type': 'nested',
+                    'type': constants.NESTED,
                     'value': inner(first[key], second[key]),
                 }
             else:
                 inner_repr[key] = {
-                    'type': 'changed',
+                    'type': constants.CHANGED,
                     'old': first[key],
                     'new': second[key],
                 }

@@ -1,5 +1,9 @@
 """Module provides function to format diff string in stylish format."""
 
+from gendiff import constants
+
+REPLACER = '    '
+
 
 def convert_to_string(inner_data):
     """Convert data to string and boolen and none types in special stinrgs.
@@ -33,11 +37,10 @@ def format_stylish(diff_tree):
         if not isinstance(inner_data, dict):
             return convert_to_string(inner_data)
 
-        replacer = '    '
-        indent = replacer * depth
+        indent = REPLACER * depth
         child_ident_size = depth + 1
-        child_ident = replacer * child_ident_size
-        child_ident_cut = replacer * (child_ident_size - 1)
+        child_ident = REPLACER * child_ident_size
+        child_ident_cut = REPLACER * (child_ident_size - 1)
 
         children = []
         for key, node in inner_data.items():
@@ -47,22 +50,22 @@ def format_stylish(diff_tree):
             if isinstance(node, dict):
                 current_type = node.get('type')
                 current_value = node.get('value')
-                if current_type in {'nested', 'unchanged'}:
+                if current_type in {constants.NESTED, constants.UNCHANGED}:
                     string = (
                         f'{key_indent}: '
                         f'{inner(current_value, child_ident_size)}'
                     )
-                elif current_type == 'added':
+                elif current_type == constants.ADDED:
                     string = (
                         f'{add_key_indent}: '
                         f'{inner(current_value, child_ident_size)}'
                     )
-                elif current_type == 'deleted':
+                elif current_type == constants.DELETED:
                     string = (
                         f'{delete_key_indent}: '
                         f'{inner(current_value, child_ident_size)}'
                     )
-                elif current_type == 'changed':
+                elif current_type == constants.CHANGED:
                     string_del = (
                         f'{delete_key_indent}: '
                         f'{inner(node.get("old"), child_ident_size)}'

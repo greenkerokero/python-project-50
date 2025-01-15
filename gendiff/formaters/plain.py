@@ -1,5 +1,8 @@
 """Module provides function to format diff string in plain format."""
+
 from json import dumps as json_dumps
+
+from gendiff import constants
 
 
 def convert_to_string(inner_data):
@@ -45,24 +48,24 @@ def format_plain(diff_tree):
             current_value = node.get('value')
             current_old = node.get('old')
             current_new = node.get('new')
-            if current_type == 'nested':
+            if current_type == constants.NESTED:
                 string = inner(current_value, new_node_path)
-            elif current_type == 'added':
+            elif current_type == constants.ADDED:
                 value_add = convert_to_string(current_value)
                 string = (
                     f'Property {path_in_string} was added '
                     f'with value: {value_add}'
                 )
-            elif current_type == 'deleted':
+            elif current_type == constants.DELETED:
                 string = f'Property {path_in_string} was removed'
-            elif current_type == 'changed':
+            elif current_type == constants.CHANGED:
                 value_old = convert_to_string(current_old)
                 value_new = convert_to_string(current_new)
                 string = (
                     f'Property {path_in_string} was updated. '
                     f'From {value_old} to {value_new}'
                 )
-            elif current_type == 'unchanged':
+            elif current_type == constants.UNCHANGED:
                 continue
             children.append(string)
         return '\n'.join(children)
