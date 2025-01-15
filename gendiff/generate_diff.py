@@ -1,6 +1,5 @@
 """Generate diff tow json or yaml files in specified format."""
 
-
 from gendiff.file_processing import parse_file
 from gendiff.formaters.formatting import diff_formater
 from gendiff.make_diff_tree import build_diff_tree

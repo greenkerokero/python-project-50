@@ -1,4 +1,5 @@
 """Pars arguments entered by user into the command line."""
+
 import argparse
 import sys
 
