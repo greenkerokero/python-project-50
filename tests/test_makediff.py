@@ -16,7 +16,7 @@ def get_fixture_path(name):
     Returns:
         Path from project root to fixture
     """
-    return os.path.join('gendiff/tests/fixtures', name)
+    return os.path.join('tests/fixtures', name)
 
 
 def open_file(path):
